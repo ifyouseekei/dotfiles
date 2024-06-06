@@ -1,31 +1,140 @@
-{
-    "vim.leader": "<Space>",
-    "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindings": [
-        { "before": ["[","b"], "commands": [":bprevious"] },
-        { "before": ["]","b"], "commands": [":bnext"] },
-        // { "before": ["x"], "commands": ["\"_x"] },
-        { "before": ["leader","w"], "commands": [":w"] },
-        { "before": ["leader","q"], "commands": [":q"] },
-
-        //splits
-        { "before": ["leader","v"], "commands": [":vsplit"] },
-        { "before": ["leader","s"], "commands": [":split"] },
-
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
+// Place your key bindings in this file to override the defaultsauto[]
+[
     {
-      "before": ["p"],
-      "commands": ["editor.action.clipboardPasteAction"]
-    }
-  ],
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "key": "ctrl-h",
+        "command": "workbench.action.navigateLeft"
     },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+        "key": "ctrl-l",
+        "command": "workbench.action.navigateRight"
     },
-    "[scss]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+        "key": "ctrl-k",
+        "command": "workbench.action.navigateUp"
     },
-}
+    {
+        "key": "ctrl-j",
+        "command": "workbench.action.navigateDown"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    {
+        "key": "ctrl+alt+v",
+        "command": "toggleVim"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "editor.action.addSelectionToNextFindMatch",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "deleteFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+        "key": "ctrl+j",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "ctrl+p",
+        "command": "-extension.vim_ctrl+p",
+        "when": "editorTextFocus && vim.active && vim.use<C-p> && !inDebugRepl || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'CommandlineInProgress' || vim.active && vim.use<C-p> && !inDebugRepl && vim.mode == 'SearchInProgressMode'"
+    },
+    {
+        "key": "space e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "tab",
+        "command": "workbench.action.nextEditorInGroup",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    },
+    {
+        "key": "shift+tab",
+        "command": "workbench.action.previousEditorInGroup",
+        "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
+    },
+
+    //coding
+    {
+        "key": "space g d",
+        "command": "editor.action.revealDefinition",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    {
+        "key": "space g r",
+        "command": "editor.action.goToReferences",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "vim.mode !== 'Insert' && editorTextFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "vim.mode !== 'Insert' && editorTextFocus"
+    },
+    {
+        "key": "shift+k",
+        "command": "editor.action.showHover",
+        "when": "vim.mode !== 'Insert' && editorTextFocus"
+    },
+    {
+        "key": "space c a",
+        "command": "editor.action.triggerSuggest",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    {
+        "key": "space c s",
+        "command": "workbench.action.gotoSymbol",
+        "when": "vim.mode == 'Normal' && editorTextFocus"
+    },
+    {
+        "key": "space q",
+        "command": "workbench.action.closeActiveEditor",
+        "when": "vim.mode == 'Normal'"
+    },
+    {
+        "key": "space s",
+        "command": "workbench.action.splitEditor",
+        "when": "vim.mode == 'Normal'"
+    },
+    {
+        "key": "space v",
+        "command": "workbench.action.splitEditorDown",
+        "when": "vim.mode == 'Normal'"
+    },
+]
