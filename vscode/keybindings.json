@@ -1,19 +1,26 @@
 // Place your key bindings in this file to override the defaultsauto[]
 [
+    //Turn off vim if keybindings conflicts
     {
-        "key": "ctrl-h",
+        "key": "ctrl+alt+v",
+        "command": "toggleVim"
+    },
+
+    //Navigation
+    {
+        "key": "ctrl+h",
         "command": "workbench.action.navigateLeft"
     },
     {
-        "key": "ctrl-l",
+        "key": "ctrl+l",
         "command": "workbench.action.navigateRight"
     },
     {
-        "key": "ctrl-k",
+        "key": "ctrl+k",
         "command": "workbench.action.navigateUp"
     },
     {
-        "key": "ctrl-j",
+        "key": "ctrl+j",
         "command": "workbench.action.navigateDown"
     },
     {
@@ -37,23 +44,9 @@
         "when": "inQuickOpen"
     },
     {
-        "key": "ctrl+alt+v",
-        "command": "toggleVim"
-    },
-    {
         "key": "ctrl+n",
         "command": "editor.action.addSelectionToNextFindMatch",
         "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-    },
-    {
-        "key": "ctrl+n",
-        "command": "explorer.newFile",
-        "when": "explorerViewletFocus"
-    },
-    {
-        "key": "ctrl+shift+d",
-        "command": "deleteFile",
-        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
     },
     {
         "key": "ctrl+j",
@@ -136,5 +129,17 @@
         "key": "space v",
         "command": "workbench.action.splitEditorDown",
         "when": "vim.mode == 'Normal'"
+    },
+
+    //file explorer actions
+    {
+        "key": "ctrl+n",
+        "command": "explorer.newFile",
+        "when": "explorerViewletFocus"
+    },
+    {
+        "key": "ctrl+shift+d",
+        "command": "deleteFile",
+        "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceReadonly && !inputFocus"
     },
 ]
