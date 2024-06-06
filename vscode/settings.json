@@ -1,15 +1,13 @@
 {
-    "vim.leader": "<Space>",
     "vim.useSystemClipboard": true,
-    "vim.normalModeKeyBindings": [
-        { "before": ["[","b"], "commands": [":bprevious"] },
-        { "before": ["]","b"], "commands": [":bnext"] },
-        { "before": ["leader","w"], "commands": [":w"] },
-        { "before": ["leader","q"], "commands": [":q"] },
-
-        //splits
-        { "before": ["leader","v"], "commands": [":vsplit"] },
-        { "before": ["leader","s"], "commands": [":split"] },
-
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p"
+            ],
+            "commands": [
+                "editor.action.clipboardPasteAction"
+            ]
+        }
     ],
 }
