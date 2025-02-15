@@ -1,0 +1,22 @@
+//@theme "/usr/share/rofi/themes/lb.rasi"
+configuration {
+	show-icons: true;
+	display-drun: "Applications:";
+	display-window: "Windows:";
+	drun-display-format: "{icon} {name}";
+}
+
+
+window {
+    width: 45%;
+}
+
+element {
+    padding: 15;
+}
+
+
+
+//@theme "/home/k-hiragi/.local/share/rofi/themes/rounded-purple-dark.rasi"
+
+@theme "/home/k-hiragi/.local/share/rofi/themes/rounded-green-dark.rasi"
