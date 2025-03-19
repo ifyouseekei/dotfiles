@@ -47,8 +47,7 @@ output * bg ./bg.jpg fill
 exec swayidle -w \
          timeout 300 'swaylock -f -c 000000' \
          timeout 600 'swaymsg "output * power off"' resume 'swaymsg "output * power on"' \
-         timeout 900 'systemctl suspend' resume 'swaymsg "output * power on"' \
-         before-sleep 'swaylock -f -c 000000'
+         timeout 900 'systemctl suspend'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -230,21 +229,19 @@ bindsym $mod+r mode "resize"
 #
 set $gnome-schema org.gnome.desktop.interface
 
-# Start up applications
-exec {
-}
-
 exec_always {
   gsettings set $gnome-schema gtk-theme 'Sweet-nova'
+  fcitx5
   pkill kanshi
   kanshi &
 }
 
-bindsym $mod+Backspace exec swaylock -f
+bindsym $mod+Backspace exec swaylock
 bindsym $mod+Shift+Backspace exec systemctl suspend
+bindsym $mod+p exec flameshot gui
 
+gaps inner 5
 default_border pixel 5
 default_floating_border none
 
-gaps inner 5
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'

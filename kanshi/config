@@ -8,6 +8,7 @@ profile {
     exec swaymsg workspace 1, move workspace to DP-2
     exec swaymsg workspace 2, move workspace to DP-2
     exec swaymsg workspace 3, move workspace to DP-2
+    exec swaymsg workspace 10, move workspace to eDP-1
 }
 
 
