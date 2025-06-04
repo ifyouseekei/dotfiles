@@ -7,9 +7,11 @@ declare -a config=(
   "rofi"
   "kanshi"
   "waybar"
+  "foot"
 )
 
 for i in "${config[@]}"; do
   rm -rf $HOME/.config/$i
   ln -s $DOTFILES/$i $HOME/.config/$i
+  echo "Symlinked" $i
 done
