@@ -1,0 +1,128 @@
+{
+    "vim.useSystemClipboard": true,
+    "vim.leader": "Space",
+    "vim.normalModeKeyBindings": [
+        {
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "d"
+            ],
+            "commands": [
+                "editor.action.revealDefinition"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "a"
+            ],
+            "commands": [
+                "editor.action.triggerSuggest"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "q",
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "v",
+            ],
+            "commands": [
+                "workbench.action.splitEditorDown"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "s",
+            ],
+            "commands": [
+                "workbench.action.splitEditor"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "c",
+                "s",
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "p"
+            ],
+            "commands": [
+                "editor.action.clipboardPasteAction"
+            ]
+        }
+    ],
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "prisma.showPrismaDataPlatformNotification": false,
+    "editor.minimap.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "editor.scrollbar.verticalScrollbarSize": 5,
+    "window.menuBarVisibility": "toggle",
+    "workbench.editor.tabActionLocation": "right",
+    "window.commandCenter": false,
+    "workbench.activityBar.location": "hidden",
+    "explorer.openEditors.visible": 5,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "[css]": {
+        "editor.defaultFormatter": "vscode.css-language-features"
+    },
+    "explorer.confirmDragAndDrop": false,
+}
