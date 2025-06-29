@@ -47,6 +47,8 @@ button:hover {
     padding: 0 5px;
     background-color: transparent;
     color: #ffffff;
+
+    border-radius: 5px;
 }
 
 #workspaces button:hover {
@@ -54,8 +56,7 @@ button:hover {
 }
 
 #workspaces button.focused {
-    background-color: #64727D;
-    box-shadow: inset 0 -3px #ffffff;
+    background-color: #41496F;
 }
 
 #workspaces button.urgent {
@@ -84,7 +85,6 @@ button:hover {
 #scratchpad,
 #power-profiles-daemon,
 #mpd,
-#hardware,
 #language {
     padding: 0 10px;
     color: #ffffff;
@@ -92,7 +92,7 @@ button:hover {
 }
 
 #hardware {
-    background-color: #64727D;
+    background-color: transparent;
 }
 
 #window,
@@ -111,7 +111,7 @@ button:hover {
 }
 
 #clock {
-    background-color: #64727D;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 #battery {
@@ -239,7 +239,7 @@ label:focus {
 }
 
 #tray {
-    background-color: #2980b9;
+    background-color: transparent;
 }
 
 #tray > .passive {

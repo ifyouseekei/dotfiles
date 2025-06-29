@@ -19,4 +19,8 @@ element {
 
 //@theme "/home/k-hiragi/.local/share/rofi/themes/rounded-purple-dark.rasi"
 
-@theme "/home/k-hiragi/.local/share/rofi/themes/rounded-green-dark.rasi"
+//@theme "/home/k-hiragi/.local/share/rofi/themes/rounded-green-dark.rasi"
+
+//@theme "/home/k-hiragi/.local/share/rofi/themes/rounded-blue-dark.rasi"
+
+@theme "/home/k-hiragi/.local/share/rofi/themes/rounded-nord-dark.rasi"
