@@ -24,7 +24,7 @@
     // "temperature",
     "group/hardware",
     // "backlight",
-    "sway/language",
+    // "sway/language",
     "pulseaudio",
     "network",
     "battery",
@@ -133,8 +133,8 @@
     "modules": [
       "cpu",
       "memory",
-      "temperature",
-      "disk"
+      "temperature"
+      //"disk"
     ]
   },
   "cpu": {

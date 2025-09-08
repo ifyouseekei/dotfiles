@@ -230,15 +230,28 @@ bindsym $mod+r mode "resize"
 set $gnome-schema org.gnome.desktop.interface
 
 exec_always {
-  gsettings set $gnome-schema gtk-theme 'Sweet-nova'
+  gsettings set $gnome-schema gtk-theme 'Adwaita-dark'
   fcitx5
   pkill kanshi
   kanshi &
 }
 
+bar {
+    swaybar_command waybar
+}
+
+exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=sway
+
 bindsym $mod+Backspace exec swaylock
 bindsym $mod+Shift+Backspace exec systemctl suspend
 bindsym $mod+p exec flameshot gui
+bindsym XF86MonBrightnessUp exec light -A 5 # Increase brightness by 5%
+bindsym XF86MonBrightnessDown exec light -U 5 # Decrease brightness by 5%
+bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+
+
 
 gaps inner 5
 default_border pixel 5
