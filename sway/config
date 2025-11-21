@@ -245,7 +245,8 @@ exec dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DE
 
 bindsym $mod+Backspace exec swaylock
 bindsym $mod+Shift+Backspace exec swaylock -f -c 000000 --daemonize && systemctl suspend
-bindsym $mod+p exec flameshot gui
+#bindsym $mod+p exec flameshot gui
+bindsym $mod+p exec grim -g "$(slurp)" - | wl-copy
 bindsym XF86MonBrightnessUp exec light -A 5 # Increase brightness by 5%
 bindsym XF86MonBrightnessDown exec light -U 5 # Decrease brightness by 5%
 bindsym XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
